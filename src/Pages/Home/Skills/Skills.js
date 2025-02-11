@@ -16,7 +16,7 @@ const Skills = () => {
     };
 
     return (
-        <div className="skills-container">
+        <div className="skills-container rounded-xl shadow-xl py-16">
             <h1 className="mt-24 text-center text-5xl font-semibold text-white">Skills</h1>
             <div className="skills-grid mt-12">
                 {skills.map((skill, index) => (

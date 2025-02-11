@@ -36,9 +36,10 @@ const Education = () => {
             <div className="flex justify-center mt-12">
                 <div>
                     {education.map((edu) => (
-                        <div key={edu.id} className="rounded-xl bg-opacity-15 bg-black shadow-xl px-12 py-6 mb-4 w-[70rem]">
-                            <div className="mb-2 flex justify-between"><div className="text-3xl text-rose-800 ">
-                                {edu.degree} in {edu.subject}</div>
+                        <div key={edu.id} className="rounded-xl bg-opacity-15 bg-black shadow-xl px-12 py-6 mb-4 w-auto mx-4 lg:w-[70rem]">
+                            <div className="mb-2 flex flex-col lg:flex-row justify-between">
+                                <div className="text-3xl text-rose-800 ">
+                                    {edu.degree} in {edu.subject}</div>
                                 <div className="text-xl">
                                     {edu.session}
                                 </div></div>
