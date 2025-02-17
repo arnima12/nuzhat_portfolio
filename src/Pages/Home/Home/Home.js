@@ -5,6 +5,9 @@ import Education from '../Education/Education';
 import Experience from '../Experience/Experience';
 import Skills from '../Skills/Skills';
 import Contact from '../Contact/Contact';
+import TrainingCertificate from '../Training&Certificate/TrainingCertificate';
+import Project from '../Project/Project';
+import Awards from '../Awards/Awards';
 
 const Home = () => {
     return (
@@ -14,6 +17,9 @@ const Home = () => {
             <Education />
             <Experience />
             <Skills />
+            <Project />
+            <Awards />
+            <TrainingCertificate />
             <Contact />
         </div>
     );

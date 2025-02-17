@@ -1,19 +1,32 @@
 import React from 'react';
-import './Skills.css'
+import './Skills.css';
+
 const Skills = () => {
     const skills = [
-        { category: "Manual Testing", name: "Requirement Analysis", level: "1" },
-        { category: "Manual Testing", name: "Test Case Design", level: "2" },
-        { category: "Manual Testing", name: "Test Execution & Evaluation", level: "3" },
-        { category: "Project Management", name: "Trello", level: "2" },
-        { category: "Programming", name: "JavaScript", level: "3" }
+        {
+            category: "Manual Testing",
+            subSkills: [
+                { name: "Requirement Analysis" },
+                { name: "Test Case Design" },
+                { name: "Test Execution & Evaluation" }
+            ]
+        },
+        {
+            category: "Project Management",
+            subSkills: [
+                { name: "Trello" },
+                { name: "Jira" }
+            ]
+        },
+        {
+            category: "Programming",
+            subSkills: [
+                { name: "JavaScript" },
+                { name: "React.js" },
+                { name: "Node.js" }
+            ]
+        }
     ];
-
-    const getLevelStyle = (level) => {
-        const width = `${level * 20}%`;
-        const color = level > 1 ? "rgb(159 18 57)" : "gray";
-        return { width, backgroundColor: color };
-    };
 
     return (
         <div className="skills-container rounded-xl shadow-xl py-16">
@@ -22,13 +35,11 @@ const Skills = () => {
                 {skills.map((skill, index) => (
                     <div key={index} className="skill-item text-white">
                         <h2 className="text-2xl font-semibold">{skill.category}</h2>
-                        <h3>{skill.name}</h3>
-                        <div className="level-bar">
-                            <div
-                                className="level-progress"
-                                style={getLevelStyle(skill.level)}
-                            ></div>
-                        </div>
+                        <ul className="list-disc pl-5 mt-2">
+                            {skill.subSkills.map((subSkill, subIndex) => (
+                                <li key={subIndex}>{subSkill.name}</li>
+                            ))}
+                        </ul>
                     </div>
                 ))}
             </div>
