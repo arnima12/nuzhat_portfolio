@@ -21,7 +21,7 @@ const Project = () => {
     return (
         <div className="mt-24 w-full text-white">
             <h1 className="text-center text-5xl font-semibold">Projects</h1>
-            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8">
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8 mx-2">
                 {projects.map((project) => (
                     <div>
                         <h2 className="text-rose-600 text-3xl">

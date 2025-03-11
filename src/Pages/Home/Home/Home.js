@@ -8,6 +8,7 @@ import Contact from '../Contact/Contact';
 import TrainingCertificate from '../Training&Certificate/TrainingCertificate';
 import Project from '../Project/Project';
 import Awards from '../Awards/Awards';
+import Research from '../Research/Research';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Education />
             <Skills />
             <Project />
+            <Research />
             <TrainingCertificate />
             <Awards />
             <Contact />
